@@ -1,0 +1,157 @@
+.main {
+	position: relative;
+	width: 100%;
+	min-height: 700px;
+	z-index: 900;
+	background-image: url("../images/HED.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+
+	@include tablet() {
+		background-image: url("../images/HEDmini.png");
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+	}
+	@include tablet-min() {
+		background-image: url("../images/HEDm.png");
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		height: 800px;
+	}
+	&__content {
+		margin-top: 62px;
+		max-width: 542px;
+		min-height: 444px;
+		transition: 0.5s all;
+		@include tablet() {
+			width: 335px;
+			margin-top: 41px;
+		}
+		@include tablet-min() {
+			margin: 41px auto;
+		}
+		@include mobile() {
+			width: 273px;
+		}
+
+		&_title {
+			font-family: "Merriweather";
+			color: rgb(49, 49, 49);
+			font-size: 60px;
+			font-weight: 400;
+			line-height: 110%;
+			letter-spacing: 0px;
+			text-transform: uppercase;
+			@include tablet() {
+				font-size: 36px;
+				font-weight: 400;
+				line-height: 110%;
+			}
+			@include mobile() {
+				font-size: 30px;
+			}
+			span {
+				&:nth-child(1) {
+					display: block;
+					text-align: left;
+				}
+				&:nth-child(3) {
+					display: block;
+					text-align: center;
+				}
+				&:nth-child(4) {
+					display: block;
+					text-align: right;
+				}
+			}
+		}
+		&_subtitle {
+			@include tablet() {
+				width: 335px;
+				height: 69px;
+				text-align: left;
+			}
+			@include tablet-min() {
+				margin-bottom: 32px;
+			}
+			@include mobile() {
+				width: 280px;
+				height: 80px;
+				font-size: 16px;
+			}
+			margin-top: 24px;
+			margin-bottom: 39px;
+			font-family: "Golos Text", sans-serif;
+			color: rgb(49, 49, 49);
+			font-size: 18px;
+			font-weight: 400;
+			line-height: 130%;
+			letter-spacing: 0px;
+			text-align: center;
+		}
+		&_btn-wrap {
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+			@include tablet() {
+				gap: 14px;
+			}
+			.btn_black {
+				@include tablet() {
+					width: 335px;
+					height: 47px;
+				}
+				@include hover() {
+					transform: scale(0.9);
+				}
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				font-family: "Golos Text", sans-serif;
+				color: rgb(255, 255, 255);
+				font-size: 16px;
+				font-weight: 500;
+				line-height: 130%;
+				letter-spacing: 0px;
+				text-align: center;
+				min-width: 263px;
+				height: 68px;
+				padding: 20px;
+				border-radius: 66px;
+				background: rgb(31, 31, 31);
+			}
+			.btn_white {
+				@include tablet() {
+					width: 335px;
+					height: 47px;
+				}
+				@include tablet-min() {
+					background: rgb(255, 255, 255);
+					border: none;
+				}
+				@include hover() {
+					transform: scale(0.9);
+				}
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				color: rgb(31, 31, 31);
+				font-family: "Golos Text", sans-serif;
+				font-size: 16px;
+				font-weight: 500;
+				line-height: 130%;
+				letter-spacing: 0px;
+
+				min-width: 263px;
+				height: 68px;
+				padding: 20px;
+				border: 2px solid rgb(31, 31, 31);
+				border-radius: 66px;
+				color: rgb(31, 31, 31);
+			}
+		}
+	}
+}

@@ -1,0 +1,246 @@
+.stages {
+	width: 100%;
+	max-height: 984px;
+	padding-bottom: 180px;
+	@include tablet-min() {
+		padding-bottom: 184px;
+	}
+	&__content {
+		width: 100%;
+		position: relative;
+		padding-bottom: 20px;
+		overflow: hidden;
+	}
+	&__title {
+		max-width: 806px;
+		min-height: 130px;
+		padding-bottom: 54px;
+		@include desctop-smol() {
+			padding-bottom: 148px;
+		}
+		&_title {
+			color: rgb(49, 49, 49);
+			font-family: "Merriweather";
+			font-size: 54px;
+			font-weight: 400;
+			line-height: 120%;
+			letter-spacing: 0px;
+			text-align: left;
+			text-transform: uppercase;
+			@include tablet() {
+				font-size: 36px;
+			}
+			@include mobile() {
+				font-size: 30px;
+			}
+		}
+		&_link {
+			display: inline-block;
+			max-width: 335px;
+			a {
+				display: inline-block;
+				max-width: 335px;
+				font-family: "Golos Text";
+				color: rgb(48, 87, 162);
+				font-size: 20px;
+				font-weight: 400;
+				line-height: 120%;
+				letter-spacing: 0px;
+				text-align: left;
+				@include tablet() {
+					font-size: 18px;
+				}
+			}
+		}
+	}
+	&__cards_wrap {
+		width: 100%;
+		max-height: 410px;
+		display: grid;
+		gap: 20px;
+		grid-template-columns: repeat(auto-fill, minmax(335px, 394px));
+		grid-template-rows: 112px 112px 136px;
+		transition: 0.6s;
+		/* overflow: hidden; */
+
+		@include desctop-smol() {
+			grid-template-columns: repeat(5, minmax(335px, 335px));
+			grid-template-rows: 300px;
+		}
+	}
+	&__card {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		padding: 20px;
+		background: url("../images/cardbg.png") no-repeat 100% 100% / cover;
+		@include mobile() {
+			width: 285px;
+		}
+		&_circl {
+			flex-shrink: 0;
+			width: 36px;
+			height: 36px;
+			display: inline-flex;
+			justify-content: center;
+			align-items: center;
+			border-radius: 60px;
+			text-align: center;
+			background: rgb(255, 255, 255);
+			color: rgb(49, 49, 49);
+			font-family: "Golos Text";
+			font-size: 20px;
+			font-weight: 600;
+		}
+		&_descr {
+			max-width: 446px;
+			margin-left: 16px;
+			color: rgb(49, 49, 49);
+			font-family: "Golos Text";
+			font-size: 20px;
+			font-weight: 500;
+			letter-spacing: 0px;
+			@include desctop-smol() {
+				font-size: 18px;
+			}
+		}
+		&_card3 {
+			grid-row: span 2;
+			@include desctop-smol() {
+				grid-row: span 1;
+			}
+		}
+		&_card7 {
+			grid-column: 2/4;
+			@include desctop-smol() {
+				grid-column: 5/6;
+			}
+		}
+		&_card1,
+		&_card4,
+		&_card5,
+		&_card2 {
+			@include desctop-smol() {
+				height: 150px;
+			}
+		}
+
+		&_img {
+			position: absolute;
+			width: 376px;
+			height: 140px;
+			top: 71%;
+			right: 0;
+			@include desctop-smol() {
+				width: 335px;
+				top: 30%;
+				right: 0;
+			}
+			@include mobile() {
+				width: 273px;
+			}
+		}
+		&_dn {
+			position: relative;
+			@include desctop-smol() {
+				display: block;
+			}
+		}
+	}
+	&__btn-wrap {
+		min-width: 178px;
+		max-width: 100%;
+		height: 36px;
+		margin: 0 auto;
+		/* 	margin-top: 20px; */
+		/* border: 1px solid black; */
+		display: none;
+		justify-content: center;
+		gap: 16px;
+		&_active {
+			display: flex;
+		}
+	}
+	&__btn-prev {
+		&::before {
+			content: "";
+			position: absolute;
+			left: 50%;
+			top: 36%;
+			transform: translateX(-50%) rotate(-38deg);
+			display: block;
+			width: 15px;
+			height: 2px;
+			background-color: white;
+			border-radius: 2px;
+		}
+		&::after {
+			content: "";
+			position: absolute;
+			left: 50%;
+			top: 59%;
+			transform: translateX(-50%) rotate(38deg);
+			display: block;
+			width: 15px;
+			height: 2px;
+			background-color: white;
+			border-radius: 2px;
+		}
+	}
+	&__btn-next {
+		&::before {
+			content: "";
+			position: absolute;
+			left: 50%;
+			top: 36%;
+			transform: translateX(-50%) rotate(38deg);
+			display: block;
+			width: 15px;
+			height: 2px;
+			background-color: white;
+			border-radius: 2px;
+		}
+		&::after {
+			content: "";
+			position: absolute;
+			left: 50%;
+			top: 59%;
+			transform: translateX(-50%) rotate(-38deg);
+			display: block;
+			width: 15px;
+			height: 2px;
+			background-color: white;
+			border-radius: 2px;
+		}
+	}
+	&__btn {
+		width: 36px;
+		height: 36px;
+		border-radius: 50%;
+		border: none;
+		background-color: #d9d9d9;
+		position: relative;
+		cursor: pointer;
+		flex-shrink: 0;
+		&_active {
+			background-color: black;
+		}
+	}
+	&__btn-dots {
+		max-width: 100%;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		gap: 6px;
+	}
+	&__dots {
+		flex-shrink: 0;
+		width: 10px;
+		height: 10px;
+		border-radius: 50%;
+		background-color: #d9d9d9;
+		&_active {
+			background-color: black;
+		}
+	}
+}

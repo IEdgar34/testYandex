@@ -1,0 +1,10 @@
+.header {
+	&__logo {
+		padding-top: 26px;
+		@include desctop() {
+			width: 208px;
+			margin-top: 20px;
+			padding: 0;
+		}
+	}
+}

@@ -1,0 +1,23 @@
+@font-face {
+	font-family: "Merriweather";
+	src: url("../fonts/Merriweather/Merriweather-Regular.eot");
+	src: local("Merriweather Regular"), local("Merriweather-Regular"),
+		url("../fonts/Merriweather/Merriweather-Regular.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/Merriweather/Merriweather-Regular.woff2") format("woff2"),
+		url("../fonts/Merriweather/Merriweather-Regular.woff") format("woff"),
+		url("../fonts/Merriweather/Merriweather-Regular.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Golos Text";
+	src: url("../fonts/golos/GolosText-Regular.eot");
+	src: local("Golos Text Regular"), local("GolosText-Regular"),
+		url("../fonts/golos/GolosText-Regular.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/golos/GolosText-Regular.woff2") format("woff2"),
+		url("../fonts/golos/GolosText-Regular.woff") format("woff"),
+		url("../fonts/golos/GolosText-Regular.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+}

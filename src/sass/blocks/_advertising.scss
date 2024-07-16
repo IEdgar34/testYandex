@@ -1,0 +1,56 @@
+.advertising {
+	/* display: flex;
+	align-items: center;
+	justify-content: center; */
+	width: 100%;
+	min-height: 38px;
+	max-height: 60px;
+	padding: 18px 0;
+	margin: 0 auto;
+	background-color: rgb(245, 73, 50);
+	@include mobile() {
+		height: 38px;
+	}
+	&__content {
+		width: calc(100% - 20px);
+		margin: 0 auto;
+		overflow: hidden;
+	}
+	&__slide {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		gap: 6px;
+		animation-name: advertising;
+
+		animation-duration: 25s;
+		animation-iteration-count: infinite;
+		animation-timing-function: linear;
+
+		@keyframes advertising {
+			from {
+				transform: translateX(120vw);
+			}
+			to {
+				transform: translateX(-120vw);
+			}
+		}
+		.circle {
+			width: 9px;
+			height: 9px;
+			border-radius: 50%;
+			background-color: rgb(255, 255, 255);
+		}
+		li {
+			flex-shrink: 0;
+			font-family: "Merriweather";
+			color: rgb(255, 255, 255);
+			font-size: 22px;
+			font-weight: 400;
+			line-height: 110%;
+			letter-spacing: 0px;
+			text-align: center;
+			text-transform: uppercase;
+		}
+	}
+}

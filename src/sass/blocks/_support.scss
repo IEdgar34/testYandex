@@ -1,0 +1,64 @@
+.support {
+	width: 100%;
+	min-height: 394px;
+	padding: 80px 0 64px 0;
+	@include tablet-big() {
+		padding: 48px 0 21px 0;
+	}
+	&__content {
+		display: flex;
+		gap: 64px;
+		align-items: center;
+		@include tablet-big() {
+			flex-wrap: wrap;
+			justify-content: center;
+			gap: 24px;
+		}
+		@include tablet-min() {
+			width: 100%;
+		}
+		&_black-text {
+			max-width: 764px;
+			max-height: 195px;
+			font-family: "Merriweather";
+			color: rgb(49, 49, 49);
+			font-size: 36px;
+			font-weight: 700;
+			line-height: 135%;
+			letter-spacing: 0px;
+			text-align: left;
+			text-transform: uppercase;
+			.colred {
+				color: rgb(245, 73, 50);
+			}
+			@include tablet-big() {
+				font-size: 28px;
+			}
+			@include tablet-min() {
+				width: 100%;
+				font-size: 23px;
+			}
+		}
+		img {
+			width: 394px;
+			height: 250px;
+			@include tablet-big() {
+				height: 212px;
+			}
+			@include tablet-min() {
+				width: 100%;
+			}
+		}
+		.dispnon {
+			display: none;
+			@include tablet-big() {
+				display: block;
+			}
+		}
+		.dispblo {
+			@include tablet-big() {
+				display: none;
+			}
+		}
+	}
+}
